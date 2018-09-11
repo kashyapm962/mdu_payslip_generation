@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Submit Your details.</h2>
+
+<form action="{% url 'search:result' %}", method="get">
+  Month:<br>
+    <select name="Months">
+    <option value="JAN">January</option>
+    <option value="FEB">February</option>
+    <option value="MARCH">March</option>
+    <option value="APRIL">April</option>
+    <option value="MAY">May</option>
+    <option value="JUNE">June</option>
+    <option value="JULY">July</option>
+    <option value="AUG">August</option>
+    <option value="SEPT">September</option>
+    <option value="OCT">October</option>
+    <option value="NOV">November</option>
+    <option value="DEC">December</option>
+  	</select>
+  	<br>
+  <!--Year:<br>
+  <input type="text" name="year" value="1996">
+  <br><br>
+  PAN NO.:<br>
+  <input type="text" name="pan" value="">
+  <br><br>
+  EMP NO.:<br>
+  <input type="text" name="empl_no" value="">
+  <br><br> !-->
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
