@@ -56,4 +56,8 @@ class payslip(models.Model):
 	month = models.CharField(max_length=6,null=True)
 	year = models.IntegerField(null=True)
 	
+class ExcelFile(models.Model):
+	files = models.FileField()
+	entered = models.BooleanField(default=False)
+	
 	
