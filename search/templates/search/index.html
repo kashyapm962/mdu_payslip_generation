@@ -4,9 +4,10 @@
 
 <h2>Submit Your details.</h2>
 
-<form action="{% url 'search:result' %}", method="get">
+<form action="{% url 'search:result' %}", method="POST">
+  {% csrf_token %}
   Month:<br>
-    <select name="Months">
+    <select name="month">
     <option value="JAN">January</option>
     <option value="FEB">February</option>
     <option value="MARCH">March</option>
@@ -21,7 +22,7 @@
     <option value="DEC">December</option>
   	</select>
   	<br>
-  <!--Year:<br>
+  Year:<br>
   <input type="text" name="year" value="1996">
   <br><br>
   PAN NO.:<br>
@@ -29,7 +30,7 @@
   <br><br>
   EMP NO.:<br>
   <input type="text" name="empl_no" value="">
-  <br><br> !-->
+  <br><br>
   <input type="submit" value="Submit">
 </form> 
 
