@@ -2,15 +2,16 @@ from django.db import models
 
 # Create your models here.
 class payslip(models.Model):
-	created_at = models.DateTimeField(auto_now_add=True)
 	ECR_no = models.CharField(max_length=30)
 	Pan = models.CharField(max_length=50)
+	empl_no = models.CharField(max_length=50)
 	Name = models.CharField(max_length=100)
 	Father = models.CharField(max_length=100)
 	Desgn = models.CharField(max_length=100)
+	Dept = models.CharField(max_length=100)
 	acc_no = models.CharField(max_length=30)
 	PF_ac = models.CharField(max_length=10)
-	mo_inc = models.FloatField()
+	mo_inc = models.CharField(max_length=10)
 	relief = models.CharField(max_length=15,null=True)
 	basic_pay = models.FloatField()
 	d_pay = models.FloatField()
