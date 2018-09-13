@@ -4,11 +4,11 @@ from django.db import models
 class payslip(models.Model):
 	ECR_no = models.CharField(max_length=30)
 	Pan = models.CharField(max_length=50)
-	empl_no = models.CharField(max_length=50)
+	empl_no = models.CharField(max_length=50,null=True)
 	Name = models.CharField(max_length=100)
 	Father = models.CharField(max_length=100)
 	Desgn = models.CharField(max_length=100)
-	Dept = models.CharField(max_length=100)
+	Dept = models.CharField(max_length=100,null=True)
 	acc_no = models.CharField(max_length=30)
 	PF_ac = models.CharField(max_length=10)
 	mo_inc = models.CharField(max_length=10)
@@ -57,8 +57,4 @@ class payslip(models.Model):
 	month = models.CharField(max_length=6,null=True)
 	year = models.IntegerField(null=True)
 	
-class ExcelFile(models.Model):
-	files = models.FileField()
-	entered = models.BooleanField(default=False)
-	
-	
+
