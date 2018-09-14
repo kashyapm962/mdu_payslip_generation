@@ -14,11 +14,9 @@ def index(request):
 	
 	
 def result(request):
-	month = request.POST['month']
-	year = request.POST['year']
 	pan = request.POST['pan']
-	empl_no = request.POST['empl_no']
-	return HttpResponse("<h1>This is working :"+str(month)+str(year)+str(pan)+str(empl_no)+"</h1>")
+	obj = payslip.objects.filter(Pan__startswith=str(pan))[0]
+	return HttpResponse("<h1>This is working :"+str(obj.Name)+"</h1>")
 	
 def upload(request):
 	return render(request,'search/upload.html')
